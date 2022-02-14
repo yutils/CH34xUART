@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CH34xUARTDemo</string>
+    <string name="action_settings">设置</string>
+    <string name="baudRate">波特率</string>
+    <string name="baud_rate_str">波特率</string>
+    <string name="stop_bit">停止位</string>
+    <string name="data_bit">数据位</string>
+    <string name="parity_str">校验位</string>
+    <string name="flow">串口流</string>
+    <string name="config">配置</string>
+    <string name="read_bytes">读取 Bytes</string>
+    <string name="write_bytes">写入 Bytes</string>
+    <string name="write">写入</string>
+    <string name="open">打开</string>
+    <string name="clear">清屏</string>
+    <string name="hint">写入串口的内容（HEX）</string>
+
+    <string-array name="baud_rate">
+        <item>300</item>
+        <item>600</item>
+        <item>1200</item>
+        <item>2400</item>
+        <item>4800</item>
+        <item>9600</item>
+        <item>19200</item>
+        <item>38400</item>
+        <item>57600</item>
+        <item>115200</item>
+        <item>230400</item>
+        <item>460800</item>
+        <item>921600</item>
+    </string-array>
+
+    <string-array name="stop_bits">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="data_bits">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="parity">
+        <item>None</item>
+        <item>Odd</item>
+        <item>Even</item>
+        <item>Mark</item>
+        <item>Space</item>
+    </string-array>
+
+    <string-array name="flow_control">
+        <item>None</item>
+        <item>CTS/RTS</item>
+    </string-array>
+</resources>
