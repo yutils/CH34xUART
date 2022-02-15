@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,6 +34,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
+    
     //CH340/CH341的USB转串口安卓免驱应用库
     implementation project(':ch34x')
+
+    //implementation 'com.kotlinx:CH34xUART:1.0.0'
 }

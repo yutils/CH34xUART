@@ -7,8 +7,6 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
@@ -32,3 +30,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
+//maven配置和签名文件，请注释掉该行
+apply from: "${getRootDir().absolutePath}/gradles/publish-maven.gradle"
