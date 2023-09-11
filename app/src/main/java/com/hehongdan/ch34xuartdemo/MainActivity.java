@@ -20,6 +20,8 @@ import com.hehongdan.ch34xuartdemo.databinding.MainBinding;
 import com.hehongdan.ch34xuartdriver.CH34xUARTDriver;
 import com.hehongdan.ch34xuartdriver.Utils;
 
+import java.util.Arrays;
+
 /**
  * 首页
  *
@@ -83,6 +85,7 @@ public class MainActivity extends Activity {
         //写入按钮
         binding.writeButton.setOnClickListener(v -> {
             byte[] to_send = Utils.hexStringToByte(binding.writeText.getText().toString());//以16进制发送
+            Toast.makeText(MainActivity.this, "发送：" + Arrays.toString(to_send), Toast.LENGTH_SHORT).show();
             //byte[] to_send = toByteArray2(writeText.getText().toString());//以字符串方式发送
             int result = MyApp.driver.writeData(to_send, to_send.length);//写数据，第一个参数为需要发送的字节数组，第二个参数为需要发送的字节长度，返回实际发送的字节长度
             if (result < 0) {
@@ -192,7 +195,7 @@ public class MainActivity extends Activity {
 
         //读取数据监听
         MyApp.driver.setReadListener(bytes -> {
-            String text = Utils.bytesToHexString(bytes," ");//以16进制输出
+            String text = Utils.bytesToHexString(bytes, " ");//以16进制输出
             //Log.v("长度：", "bytes.length="+ bytes.length + "\t内容：" + text);
             runOnUiThread(() -> {
                 //数据

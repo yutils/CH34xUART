@@ -168,7 +168,7 @@ public class CH34xUARTDriver {
      */
     public UsbDevice enumerateDevice() {
         this.usbManager = (UsbManager) this.context.getSystemService(Context.USB_SERVICE);
-        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), 0);
+        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), PendingIntent.FLAG_IMMUTABLE);
         HashMap var1;
         if ((var1 = this.usbManager.getDeviceList()).isEmpty()) {
             if (showToast) {
@@ -201,7 +201,7 @@ public class CH34xUARTDriver {
      * @see #resumeUsbList() 已经实现
      */
     public void openDevice(UsbDevice usbDevice) {
-        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), 0);
+        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), PendingIntent.FLAG_IMMUTABLE);
         if (this.usbManager.hasPermission(usbDevice)) {
             this.connectionDevice(usbDevice);
         } else {
@@ -223,7 +223,7 @@ public class CH34xUARTDriver {
      */
     public int resumeUsbList() {
         this.usbManager = (UsbManager) this.context.getSystemService(Context.USB_SERVICE);
-        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), 0);
+        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), PendingIntent.FLAG_IMMUTABLE);
         HashMap var1;
         if ((var1 = this.usbManager.getDeviceList()).isEmpty()) {
             if (showToast) {
@@ -680,7 +680,7 @@ public class CH34xUARTDriver {
      */
     public int resumeUsbPermission() {
         this.usbManager = (UsbManager) this.context.getSystemService(Context.USB_SERVICE);
-        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), 0);
+        this.pendingIntent = PendingIntent.getBroadcast(this.context, 0, new Intent(this.broadcastReceiverFilter), PendingIntent.FLAG_IMMUTABLE);
         HashMap var1;
         if ((var1 = this.usbManager.getDeviceList()).isEmpty()) {
             if (showToast) {
