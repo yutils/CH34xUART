@@ -5,11 +5,11 @@ plugins {
     id 'kotlin-parcelize'
 }
 android {
-    compileSdk 33
+    compileSdk 34
     namespace 'com.hehongdan.ch34xuartdriver'
     defaultConfig {
         minSdk 15
-        targetSdk 33
+        targetSdk 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
@@ -31,8 +31,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 //maven配置和签名文件，请注释掉该行
 apply from: "${getRootDir().absolutePath}/gradles/publish-maven.gradle"

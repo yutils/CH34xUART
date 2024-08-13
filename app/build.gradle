@@ -5,12 +5,12 @@ plugins {
     id 'kotlin-parcelize'
 }
 android {
-    compileSdk 33
+    compileSdk 34
     namespace 'com.hehongdan.ch34xuartdemo'
     defaultConfig {
         applicationId "com.hehongdan.ch34xuartdemo"
         minSdk 19
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -32,11 +32,11 @@ android {
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'//再高 minSdk 就不能是 19
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 //CH340/CH341的USB转串口安卓免驱应用库
     implementation project(':ch34x')
     //implementation 'com.kotlinx:CH34xUART:1.0.0'
